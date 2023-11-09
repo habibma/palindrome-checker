@@ -1,0 +1,17 @@
+function palindrome(str) {
+  
+  //To turn the string to a modified one excluded non-alphanumeric characters(plus _)
+  let modifiedStr = str.toLowerCase().split("").filter(a => /[a-zA-Z]|\d/g.test(a)).join("");
+
+  //To reverse the modified string
+  let reverseStr = modifiedStr.split("").reverse().join("");
+  
+  //To check the similarity
+  if (modifiedStr == reverseStr){
+    return true;
+  }
+
+  return false;
+}
+
+palindrome("t_ods3333t5");
